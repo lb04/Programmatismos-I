@@ -88,5 +88,7 @@ int main()
 			hexademical(x);
 		}
 	}
+	// must free memory
+	free(ans);
 	return 0;
 }
