@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<string.h>
 void binary(int num){
 	int keep = num;
 	int poiliko = num / 2;
@@ -48,38 +49,29 @@ void hexademical(int num_16){
 int main(){
 	int x;
 	char * ans;
-	printf("convertable situations:\n");
-	printf("1) binary\n");
-	printf("2) octal\n");
-	printf("3) hexadecimal\n");
-	scanf("%s", &ans);
-	while(ans=="binary"|| ans=="octal"|| ans=="hexadecimal"||ans == "continue"){
-		if(ans == "binary"){
+	while(strcmp(ans,"exit") != 0){
+		printf("convertable situations:\n");
+		printf("1) binary\n");
+		printf("2) octal\n");
+		printf("3) hexadecimal\n");
+		printf("4) exit\n");
+		scanf("%s", ans);
+		if(strcmp(ans,"binary")== 0){
 			printf("Please insert a number to change it: ");
 			scanf("%d", &x);
 			binary(x);
 		}
-		if(ans == "octal"){
+		if(strcmp(ans,"octal")== 0){
 			printf("Please insert a number to change it: ");
 			scanf("%d", &x);
 			octal(x);	
 		}
-		if(ans == "hexademical"){
+		if(strcmp(ans,"hexademical")== 0){
 			printf("Please insert a number to change it: ");
 			scanf("%d", &x);
 			hexademical(x);
 		}
-		else{
-			char * ans_2;
-			printf("For exit please type EXIT or type continue");
-			scanf("%s", &ans_2);
-			if (ans_2 =	"EXIT"){
-				return 1;
-			}	
-			else{
-				ans == "continue";
-			}
-		}
+		
 	}
 	return 0;	
 }		
