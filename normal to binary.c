@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
 void binary(int num)
 {
 	int keep = num;
@@ -58,7 +60,7 @@ int main()
 {
 	/* test comment*/
 	int x;
-	char *ans;
+	char *ans = malloc(256);
 	while (strcmp(ans, "exit") != 0)
 	{
 		printf("convertable situations:\n");
